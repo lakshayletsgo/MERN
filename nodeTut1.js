@@ -3,3 +3,8 @@
 // To start it write node 
 // Uske baad sab run ho jayega
 console.log("Namaste");
+
+// These are constant to use in nodejs 
+const a = 10;
+const b = 98;
+console.log(a*b);

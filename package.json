@@ -1,0 +1,19 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "This is MERN tutorial",
+  "main": "nodeTut1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakshayletsgo/MERN.git"
+  },
+  "author": "Lakshay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lakshayletsgo/MERN/issues"
+  },
+  "homepage": "https://github.com/lakshayletsgo/MERN#readme"
+}
