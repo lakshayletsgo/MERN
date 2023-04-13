@@ -19,3 +19,8 @@ event.on('click',first_event);
 event.on('click2',second_event);
 event.on('click3',third_event);
 event.emit('click');
+
+// Output
+// This is first event
+// This is second event
+// This is third event
