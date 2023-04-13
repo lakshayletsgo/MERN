@@ -19,3 +19,15 @@ console.log(main.abc);
 
 console.log(__dirname);
 console.log(__filename);
+
+
+
+// Output
+// { name: 'Lakshay', age: 19, Address: '3718, Gurugram' }
+// Lakshay
+// This is anonymeous function
+// 13
+// This is arrow function
+// 10
+// d:\MERN
+// d:\MERN\nodeTut3.js
