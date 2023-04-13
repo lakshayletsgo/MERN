@@ -24,3 +24,12 @@ per1();
 
 const a = 10;
 module.exports.abc = a;
+
+
+
+// Output
+// { name: 'Lakshay', age: 19, Address: '3718, Gurugram' }
+// Lakshay
+// This is anonymeous function
+// 13
+// This is arrow function
