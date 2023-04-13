@@ -21,3 +21,6 @@ person(3,10);
 // It is similar to anonymeous function 
 var per1 = ()=> console.log("This is arrow function ");
 per1();
+
+const a = 10;
+module.exports.abc = a;
