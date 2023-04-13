@@ -23,3 +23,12 @@
 const exported = require("./nodeTut5");
 exported.a();
 console.log(exported.vari);
+
+
+
+// Output
+// undefined
+// Lakshay22csu100@ncuindia.edu
+// Lakshay
+// This is function in the nodeTut5
+// 200
