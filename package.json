@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lakshayletsgo/MERN/issues"
   },
-  "homepage": "https://github.com/lakshayletsgo/MERN#readme"
+  "homepage": "https://github.com/lakshayletsgo/MERN#readme",
+  "dependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
