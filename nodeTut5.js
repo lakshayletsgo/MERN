@@ -19,6 +19,14 @@ console.log(E1.EmailID);
 console.log(E1.getName());
 
 
+// const variablesa = 200;
+// function abc(){
+//     console.log("This is function in the nodeTut5 ");
+// }
+// module.exports.vari = variablesa;
+// module.exports.a = abc;
+
+ 
 // Output
 // undefined
 // Lakshay22csu100@ncuindia.edu
