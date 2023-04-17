@@ -1,0 +1,28 @@
+html    
+    head 
+        title= name     
+    body   
+        h1= Comment
+        form(method='post' action='/users/')
+            div
+                | Name:
+                input(type='text' name='name1' value=`${user.name1}`)     
+                if(error.name1)
+                    h5= `${error.name1.msg}`
+            div
+                | Age:
+                input(type='text' name='age' value=`${user.age}`)
+                if (error.age)
+                    h5= `${error.age.msg}`
+            div
+                | Gender:
+                input(type='text' name='Gender' value=`${user.Gender}`)
+                if (error.Gender)
+                    h5= `${error.Gender.msg}`
+            div
+                | Email:
+                input(type='email' name='Email' value=`${user.Email}`)
+                if (error.Email)
+                    h5= `${error.Email.msg}`
+            div 
+                input(type='submit' name='submit' value='submit')

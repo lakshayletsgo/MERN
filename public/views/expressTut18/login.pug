@@ -1,0 +1,20 @@
+html    
+    head 
+        title= name     
+    body   
+        h1= Comment
+        form(method='post' action='/users/')
+            div
+                | Name:
+                input(type='text' name='name1')                
+            div
+                | Age:
+                input(type='text' name='age')
+            div
+                | Gender:
+                input(type='text' name='Gender')
+            div
+                | Email:
+                input(type='email' name='Email')
+            div 
+                input(type='submit' name='submit' value='submit')
