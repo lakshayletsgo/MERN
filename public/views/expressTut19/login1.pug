@@ -1,0 +1,38 @@
+html    
+    head 
+        title= title 
+    body 
+        form(action="/login" method='post') 
+            h1= Content
+            |Name:
+            input(type="text" name="name")
+            if(error.name)
+                h6= error.name.msg
+            br
+            |Age
+            input(type="number" name="Age")
+            if(error.Age)
+                h6= error.Age.msg
+            br
+            |Gender 
+            |Male
+            input(type="checkbox" name="Gender")
+            |Female
+            input(type="checkbox" name="Gender")
+            br
+            |Email 
+            input(type="email" name="Email")
+            if(error.Email)
+                h6= error.Email.msg
+            br
+            |Password 
+            input(type="password" name="Password")
+            if(error.Password)
+                h6= error.Password.msg
+            br
+            |Confirm Password
+            input(type="password" name="confirmPassword")
+            if(error.confirmPassword)
+                h6= error.confirmPassword.msg
+            br
+            input(type="submit", value="submit",name="Submit")
