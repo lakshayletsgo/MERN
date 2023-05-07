@@ -1,1 +1,3 @@
-<h1>ExpressTut16 Running</h1>
+"}).then(function(data){
+    console.log(data);
+})
