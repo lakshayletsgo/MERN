@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul
+    each val, index in records
+      li #{index}: #{val.name}
+      li #{index}: #{val.age}
+      li #{index}: #{val._id }
+
+  table
+    thead
+      tr
+        th Name
+        th Email
+        th Age
+    tbody 
+      tr
+      each val, index in records
+        td  #{val.name}
+        td  #{val._id}
+        td  #{val.age}
