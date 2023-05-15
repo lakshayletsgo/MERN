@@ -10,14 +10,16 @@ var conn =  mongoose.connection;
 
 var collegeSchema = new mongoose.Schema({
     name:String,
-    rollNo:Number,
+    age:Number,
+    email:String,
 })
 
 var collegeModel = mongoose.model('College',collegeSchema);
 
 var College = new collegeModel({
     name:"Lakshay",
-    rollNo:100
+    age:20,
+    email:"lakshaygoel911@gmail.com",
 })
 
 // This will save a object in the db

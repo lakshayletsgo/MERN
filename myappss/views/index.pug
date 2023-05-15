@@ -3,21 +3,39 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  //- p #{valuee}
   ul
     each val, index in records
       li #{index}: #{val.name}
       li #{index}: #{val.age}
-      li #{index}: #{val._id }
+      li #{index}: #{val.email}
 
   table
     thead
       tr
-        th Name
+        th Name 
+        br
         th Email
         th Age
     tbody 
+      hr
       tr
       each val, index in records
         td  #{val.name}
-        td  #{val._id}
+        |    
+        td  #{val.email}
         td  #{val.age}
+  br
+  br
+  br
+  form
+  .mb-3
+    label.form-label(for='exampleInputEmail1') Name
+    input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp')
+  .mb-3
+    label.form-label(for='exampleInputPassword1') Email Id
+    input#exampleInputPassword1.form-control(type='password')
+  .mb-3
+    label.form-label(for='exampleInputPassword12') Age
+    input#exampleInputPassword1.form-control(type='password')
+  button.btn.btn-primary(type='submit') Submit
