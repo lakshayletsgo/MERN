@@ -18,13 +18,13 @@ block content
         th Email
         th Age
     tbody 
-      hr
-      tr
+      //- hr
+
       each val, index in records
-        td  #{val.name}
-        |    
-        td  #{val.email}
-        td  #{val.age}
+        tr
+          td  #{val.name}   
+          td  #{val.email}
+          td  #{val.age}
   br
   br
   br
