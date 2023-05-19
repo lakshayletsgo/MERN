@@ -39,4 +39,33 @@ router.post('/',async(req,res)=>{
     res.status(500).send('Error in outside loop of Post method')
   }
 })
+
+
+router.post('/search', async(req,res)=>{
+  try{
+    
+    var fltrName = req.body.name;
+    var fltrEmail = req.body.email;
+    var fltrAge = req.body.age;
+    if(fltrName!=''&&fltrEmail!=''&&fltrAge!=''){
+      var fltrParameter ={$and:[{name:fltrName},
+        {$and:[{email:fltrEmail},{age:fltrAge}]}
+      ]} 
+    }else if(fltrName!=''&&fltrAge==''&&fltrEmail!=''){
+      var fltrParameter ={$and:[{name:fltrName},{email:fltrEmail}]}
+      
+    }else if(fltrName==''&&fltrAge!=''&&fltrEmail!=''){
+      var fltrParameter ={$and:[{age:fltrAge},{email:fltrEmail}]}
+    }else if(fltrName!=''&&fltrAge!=''&&fltrEmail==''){
+      var fltrParameter ={$and:[{age:fltrAge},{name:fltrName}]}
+    }else{
+      var fltrParameter = {};
+    }
+    const records = await College.find(fltrParameter);
+    
+    res.render('index',{records:records, title:"Lakshay3"})
+  }catch(err){
+    console.log(err)
+  }
+})
 module.exports = router;
