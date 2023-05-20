@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  //- p #{valuee}
+  //- ul
+  //-   each val, index in records
+  //-     li #{index}: #{val.name}
+  //-     li #{index}: #{val.age}
+  //-     li #{index}: #{val.email}
+
+  table
+    tbody 
+        tr
+          form(action='/search/',method='POST')
+            input#exampleInputEmail1.form-control(name='name' type='text' aria-describedby='emailHelp' placeholder="Enter your name")  
+            input#exampleInputPassword1.form-control(name='email' type='email' placeholder="Enter your email")
+            input#exampleInputPassword1.form-control(name='age' type='Number' placeholder="Enter your age")
+            button.btn.btn-primary(type='submit' value='submit') Submit
+  table
+    thead
+      tr
+        th Name 
+        th Email
+        th Age
+    tbody 
+      each val, index in records
+        -var url= val._id;
+        tr
+          td  #{val.name}   
+          td  #{val.email}
+          td  #{val.age}
+          td  
+            //- var url = /edit/&quot (val._id);
+            a(href='/edit/'+url) Edit  
+            br
+            a(href='/delete/'+url) Delete
+  br
+  br
+  br
+  form(action='/',method='POST')
+    label.form-label(for='exampleInputEmail1') Name
+    input#exampleInputEmail1.form-control(name='name' type='text' aria-describedby='emailHelp' placeholder="Enter your name")
+    .mb-3
+      label.form-label(for='exampleInputPassword1') Email Id
+      input#exampleInputPassword1.form-control(name='email' type='email' placeholder="Enter your email")
+    .mb-3
+      label.form-label(for='exampleInputPassword12') Age
+      input#exampleInputPassword1.form-control(name='age' type='Number' placeholder="Enter your age")
+    button.btn.btn-primary(type='submit' value='submit') Submit
