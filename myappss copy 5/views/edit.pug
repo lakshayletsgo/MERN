@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1= title
+    p Edit the form
+    //- -var name= records.name;
+    form(action='/update/',method='POST') 
+        input(type="hidden" name="id" value=records._id)
+        label.form-label(for='exampleInputEmail1') Name
+        input#exampleInputEmail1.form-control(name='name' type='text' aria-describedby='emailHelp' value= records.name || '' placeholder="Enter your name")
+        .mb-3
+        label.form-label(for='exampleInputPassword1') Email Id
+        input#exampleInputPassword1.form-control(name='email' type='email' value=records.email placeholder="Enter your email" )
+        .mb-3
+        label.form-label(for='exampleInputPassword12') Age
+        input#exampleInputPassword1.form-control(name='age' type='Number' value=records.age placeholder="Enter your age")
+        br
+        button.btn.btn-primary(type='submit' value='submit') Submit
