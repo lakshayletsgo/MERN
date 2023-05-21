@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action="/upload" enctype="multipart/form-data" method="post")
+    .mb-3
+    label.form-label(for='formFile') Upload File 
+    br
+    input#formFile.form-control(type='file' name='file')
+    br 
+    button(type='upload' value='submit') Upload
+    ul
+      each val,index in records
+        -var url= val.imagename
+        li
+          img(src='/uploads/'+url  alt="Nothing")
